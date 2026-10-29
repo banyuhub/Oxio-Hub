@@ -3274,9 +3274,14 @@ Library.Scheme.FontColor       = Color3.fromRGB(235, 235, 240)
 Library.Scheme.SubTextColor    = Color3.fromRGB(140, 140, 150)
 Library.Scheme.HoverColor      = Color3.fromRGB(22, 22, 26)
 
-Library.WhitelistedUsers = {
-    game:GetService("Players").LocalPlayer.Name,
-}
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+Library.WhitelistedUsers = {}
+
+if LocalPlayer then
+    table.insert(Library.WhitelistedUsers, LocalPlayer.Name)
+end
 
 local Window = Library:CreateWindow({
     Title = "OXio Hub",
