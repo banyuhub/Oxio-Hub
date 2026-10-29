@@ -3277,9 +3277,13 @@ Library.Scheme.HoverColor      = Color3.fromRGB(22, 22, 26)
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
+print("[OXio Debug] Players:", Players)
+print("[OXio Debug] LocalPlayer:", LocalPlayer)
+
 Library.WhitelistedUsers = {}
 
 if LocalPlayer then
+    print("[OXio Debug] Player name:", LocalPlayer.Name)
     table.insert(Library.WhitelistedUsers, LocalPlayer.Name)
 end
 
