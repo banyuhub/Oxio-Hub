@@ -3275,7 +3275,7 @@ Library.Scheme.SubTextColor    = Color3.fromRGB(140, 140, 150)
 Library.Scheme.HoverColor      = Color3.fromRGB(22, 22, 26)
 
 Library.WhitelistedUsers = {
-    LP.Name,
+    game:GetService("Players").LocalPlayer.Name,
 }
 
 local Window = Library:CreateWindow({
